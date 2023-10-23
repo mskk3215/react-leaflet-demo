@@ -52,11 +52,11 @@ export const App = () => {
         options={allPrefectures}
         onChange={handlePrefectureChange}
         renderInput={(params) => (
-          <TextField {...params} label="都道府県を選択" />
         )}
       />
       <Box sx={{ width: "50vw", height: "50vh" }}>
         <MapContainer center={center} zoom={5} zoomControl={false} id="map">
+            <TextField {...params} label="都道府県を選択" variant="standard" />
           <TileLayer
             attribution='© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
