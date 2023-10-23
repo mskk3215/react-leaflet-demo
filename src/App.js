@@ -42,10 +42,9 @@ export const App = () => {
   return (
     <Box
       sx={{
+        marginTop: "20px",
         display: "flex",
         flexDirection: "column",
-        alignItems: "flex-start",
-        height: "100vh",
       }}
     >
       <Autocomplete
@@ -54,9 +53,15 @@ export const App = () => {
         renderInput={(params) => (
         )}
       />
-      <Box sx={{ width: "50vw", height: "50vh" }}>
         <MapContainer center={center} zoom={5} zoomControl={false} id="map">
+          sx={{ width: 200, pl: 1 }}
             <TextField {...params} label="都道府県を選択" variant="standard" />
+      <Box
+        sx={{
+          width: "30vw",
+          height: "20vw",
+        }}
+      >
           <TileLayer
             attribution='© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
