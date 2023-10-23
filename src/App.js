@@ -62,6 +62,10 @@ export const App = () => {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           {selectedPref && <GeoJSON key={selectedPref} data={filteredData} />}
+              style={() => ({
+                color: "red",
+                weight: 2,
+              })}
         </MapContainer>
       </Box>
     </Box>
